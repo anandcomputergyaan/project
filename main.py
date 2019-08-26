@@ -7,6 +7,6 @@ def hello():
 
 @app.route('/home')
 def home():
-  return "<h1>Welcome</h1>"
+  return render_template('page.html')
 
 app.run()
