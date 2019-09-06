@@ -18,28 +18,6 @@
     <link rel="stylesheet" href="{{url_for('static',filename='css/animate.css')}}" >
     <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
 
-    <style>
-        #img1:hover{
-        transform: rotateY(150deg);
-        }
-
-        #img2:hover{
-            box-shadow: -16px 9px 28px 11px rgba(0, 0, 0, 0.25);
-        }
-
-
-        #img3:hover{
-            opacity: 0.5;
-        }
-
-
-         #img4:hover{
-            border-radius: 50%;
-        }
-
-
-    </style>
-
 </head>
 
 <body>
@@ -74,7 +52,7 @@
                     </li>
                     <li class="hidden">/</li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/contact">Contact</a>
+                        <a class="nav-link" href="/home">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -96,14 +74,61 @@
 
     <!-- Blog-page-Section -->
     <section class="blog-page">
-        <div class="blogs-home blog-inside common-heading-2">
+        <div class="blogs-home blog-inside common-heading-2 contact-Page">
 
             <div class="container">
-                <h2> Detail Page </h2>
+                <h2> Contact Us </h2>
             </div>
             <hr/>
+    <div class="container py-5 main">
+            <div class="row">
+                <div class="col-md-12" data-aos="fade-up" data-aos-duration="500">
+                    <form action="/contact_form" method="post">
+                        <div class="form-group row">
+                            <div class="col-sm-4">
+                                <input  type="text" name="name"class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="col-sm-4">
+                                <input type="text" name="email"class="form-control" placeholder="Your Email id" required>
+                            </div>
+                            <div class="col-sm-4">
+                                <input type="text" name="website" class="form-control" placeholder="Your Website" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-8">
+                                <select name="job" required>
+                                      <option value="none">None</option>
+                                      <option value="web design">Web Design</option>
+                                      <option value="psd to html">Psd to html</option>
+                                      <option value="web hosting">Web hosting</option>
+                                      <option value="website template">website template</option>
+                                      <option value="" selected disabled hidden>What Type of Service your are looking for?</option>
+                                    </select>
+                            </div>
+                            <div class="col-sm-4">
+                                <select name="budget"required>
+                                      <option value="0">0</option>
+                                      <option value="1l">1L</option>
+                                      <option value="2ls">2Ls</option>
+                                      <option value="3ls">3Ls</option>
+                                      <option value="4ls">4Ls</option>
+                                      <option value="" selected disabled hidden>Your Budget</option>
+                                    </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-12">
+                                <textarea type="text" class="form-control" placeholder="Extra Message" rows="8" required></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-lg px-4">Alright, Get the Free Quote</button>
+                    </form>
+                </div>
+            </div>
+        </div>
 
-            <center>   <a href="/" class="btn btn-success btn-lg "> Back</a></center>
+            <center>   <a href="/" class="btn btn-success  "> Back</a></center>
 
             </div>
 
